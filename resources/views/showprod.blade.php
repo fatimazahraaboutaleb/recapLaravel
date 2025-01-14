@@ -64,8 +64,8 @@
                 <h4 style="font-size: 18px; margin-bottom: 10px;">Categories</h4>
                 <ul style="list-style: none; padding: 0; line-height: 1.8;">
                     @foreach($categories as $categorie)
-                        <li>
-                            <a href="{{ url('/categorie', $categorie->id) }}" style="text-decoration: none; color: #007bff;">
+                        <li style="margin-bottom: 10px; border-left: 5px solid #597de0; padding-left: 10px;">
+                            <a href="{{ url('/categorie', $categorie->id) }}" style="text-decoration: none; color: #56708b;">
                                 {{ $categorie->NomCategorie }}
                             </a>
                         </li>
