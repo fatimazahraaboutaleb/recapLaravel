@@ -21,7 +21,15 @@
         </div>
         <div style="margin-bottom: 15px;">
             <label for="Categorie_id" style="display: block; font-weight: bold; margin-bottom: 5px;">Category:</label>
-            <input type="text" id="Categorie_id" name="Categorie_id" value="{{ $produit->Categorie_id }}" style="width: 96%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            
+            <select id="Categorie_id" name="Categorie_id" style="width: 96%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" 
+                            @if($produit->Categorie_id == $category->id) selected @endif>
+                        {{ $category->NomCategorie }}
+                    </option>
+                @endforeach
+            </select>
         </div>        
         <div style="text-align: center; margin-top: 20px;">
             <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 11px 15px; border-radius: 5px;" >

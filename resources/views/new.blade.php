@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('header')
-    <h1 style="text-align: center; font-size: 24px; font-weight: bold; color: #333;">Ajouter un Nouveau Produit</h1>
+    <h1 style="text-align: center; font-size: 24px; font-weight: bold; color: #333;">Add A New Product</h1>
 @stop
 
 @section('contenu')

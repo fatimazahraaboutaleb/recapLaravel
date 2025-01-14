@@ -31,7 +31,8 @@ class ProduitController extends Controller
     public function Edition_produit($id)
     {
         $produit = Produit::find($id);
-        return view('edit', compact('produit'));
+        $categories = Categorie::all();
+        return view('edit', compact('produit', 'categories'));
     }
 
     public function Edit_produit(Request $request, $id)
